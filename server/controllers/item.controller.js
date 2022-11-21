@@ -41,7 +41,7 @@ const getRawItem = (req, res) => {
 
 const getItems = (_req, res) => {
     Item
-        .find({ state: 0 })
+        .find()
         .sort('-createdAt')
         .select('name picture price owner')
         .limit(12)
